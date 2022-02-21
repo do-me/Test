@@ -1,0 +1,14 @@
+name: Compress Files 
+on:
+  push:
+    branches:
+      - gh-pages
+jobs:
+  compress:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: stefh/ghaction-CompressFiles@v1
+        with:       
+          depth: 5        
+          extensions: '.css,.html,.js,.map,.ttf,.otf,.eot,.svg,.woff,.woff2,.xml,.txt,.md'
+          tools: 'brotli,gzip'

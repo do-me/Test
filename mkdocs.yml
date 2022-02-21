@@ -1,0 +1,100 @@
+site_name: MultiRoute Tour!
+
+nav:
+    - Home: index.md
+    - Handbuch:
+      - Übersicht: uebersicht.md
+      - Einführung: einfuehrung.md
+      - 1. Upload: upload.md
+      - 2. Planung: planung.md
+      - 3. Flotten: flotten.md
+      - 4. Touren: tour.md
+      - Tipps & Tricks: tipps.md
+      - Changelog: changelog.md
+    - Use Cases:
+      - Spediteur: spediteur.md
+      - Außendienst: aussendienst.md
+      - Schneeräumung: schneeraeumung.md
+      - Essen auf Rädern: essen_auf_raedern.md
+      - Getränkelieferungen: getraenkelieferung.md
+      - Lieferkisten: lieferkiste.md
+      - Gebäudereinigung: gebaeudereinigung.md
+    - API:
+      - MRT! API: api-intro.md
+      - Einführung: ablauf.md
+      - Routen & Endpunkte: routen.md
+      - Beispiele:
+        - Python: mrt-api-python.md
+        - PHP: mrt-api-php.md
+#    - Referenzen: 14.md
+    - Preise: preise.md
+    - Impressum: impressum.md
+    - Datenschutz: datenschutz.md
+
+theme:
+  name: material
+  custom_dir: docs/theme_override_home/
+  # 404 page
+  static_templates:
+    - 404.html
+  # enable light/dark mode
+  palette:
+    - media: "(prefers-color-scheme: light)" 
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)" 
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+  # Default values, taken from mkdocs_theme.yml
+  language: de
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:  # from .icons path. Add to theme override for custom logo.
+    logo: truck  # top left header logo
+    repo: fontawesome/brands/git-alt
+  favicon: assets/favicon.ico #browser tab logo
+
+extra_javascript:
+        - 'stylesheets/extra.js'
+extra_css:
+        - stylesheets/extra.css
+        - stylesheets/font-awesome-4.7.0/css/font-awesome.min.css
+
+repo_url: https://github.com/gbconsite/Test
+repo_name: gbconsite/Test
+edit_uri: ./edit/main/docs
+
+markdown_extensions:
+  - lightgallery
+  - attr_list
+  - md_in_html # enable lazy loading images via ![!](assets/Auftragsinfos.jpg){ loading=lazy }
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - markdown.extensions.toc:
+      baselevel: 1
+      permalink: true
+  - toc:
+      title: Inhalt
+
+#extra:
+#  alternate:
+#    - name: Deutsch
+#      link: 
+#      lang: de
+#    - name: English
+#      link: /en/ 
+#      lang: en
