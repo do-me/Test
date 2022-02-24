@@ -16,7 +16,7 @@ jobs:
       - run: mkdocs gh-deploy --force
       - uses: stefh/ghaction-CompressFiles@v1
         with:
-          path: deploy
+          path: gh-deploy
           depth: 10        
           extensions: '.css,.html,.js,.map,.ttf,.otf,.eot,.svg,.woff,.woff2,.xml,.txt,.md'
           tools: 'brotli,gzip'
