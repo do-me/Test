@@ -19,6 +19,9 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: gh-pages
+      - run: git add * 
+      - run: git stash
+      - run: git pull
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Clone Branch
