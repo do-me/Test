@@ -89,6 +89,14 @@ markdown_extensions:
       permalink: true
   - toc:
       title: Inhalt
+      
+plugins:
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+          remove_comments: true
 
 #extra:
 #  alternate:
