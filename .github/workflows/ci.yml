@@ -36,5 +36,5 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Compress Files
-          branch: gh-deploy
+          branch: gh-pages
           push_options: '--force'
