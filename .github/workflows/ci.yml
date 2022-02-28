@@ -14,3 +14,20 @@ jobs:
       - run: pip install mkdocs-material 
       - run: pip install lightgallery
       - run: mkdocs gh-deploy --force
+  compress:
+    name: Brotli
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: gh-pages
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    - run: npm install
+    - run: npm i gzipper -g
+    - run: gzipper compress --include htm,html,css,js,svg,xml,map,json --zopfli --brotli --remove-larger --skip-compressed .
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Compress Files
+        branch: deploy
