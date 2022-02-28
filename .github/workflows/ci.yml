@@ -15,17 +15,6 @@ jobs:
       - run: pip install lightgallery
       - run: mkdocs gh-deploy --force
           
-      # clone other branch (gh-pages)
-      - uses: actions/checkout@v2
-        with:
-          ref: gh-pages
-      - run: git clean  -d  -f .
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Clone Branch
-          branch: deploy
-          push_options: '--force'
-
       # Node setup
       - uses: actions/setup-node@v2
         with:
@@ -47,5 +36,5 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Compress Files
-          branch: deploy
+          branch: gh-deploy
           push_options: '--force'
