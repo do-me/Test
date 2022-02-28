@@ -31,7 +31,7 @@ jobs:
           ref: gh-pages
 
       # compress all files in all directories
-      - run: gzipper compress --include htm,html,css,js,svg,xml,map,json --zopfli --brotli --remove-larger --skip-compressed .
+      - run: gzipper compress --include htm,html,css,js,svg,xml,map,json,img,png,jpg,jpeg --zopfli --brotli --remove-larger .
 
       # commit
       - uses: stefanzweifel/git-auto-commit-action@v4
