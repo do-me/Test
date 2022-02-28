@@ -16,13 +16,36 @@ jobs:
       - run: mkdocs gh-deploy --force
           
       # clone other branch (gh-pages)
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
         with:
-          name: do-me/Test@gh-pages   
-          branch: deploy
+          ref: gh-pages
+      - run: git clean  -d  -f .
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Clone Branch
           branch: deploy
           push_options: '--force'
-          
+
+      # Node setup
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      # install gzipper with npm
+      - run: npm install
+      - run: npm i gzipper -g
+
+      # check out other branch (gh-pages) 
+      - uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+
+      # compress all files in all directories
+      - run: gzipper compress --include htm,html,css,js,svg,xml,map,json --zopfli --brotli --remove-larger --skip-compressed .
+
+      # commit
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Compress Files
+          branch: deploy
+          push_options: '--force'
