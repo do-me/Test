@@ -1,3 +1,3 @@
 # Test
 
-A simple test repo for tests.
+A simple test repo for testing.
