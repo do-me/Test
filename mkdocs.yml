@@ -73,8 +73,8 @@ extra_css:
         - stylesheets/extra.css
         - stylesheets/font-awesome-4.7.0/css/font-awesome.min.css
 
-repo_url: https://github.com/gbconsite/Test
-repo_name: gbconsite/Test
+repo_url: https://github.com/do-me/Test
+repo_name: do-me/Test
 edit_uri: ./edit/main/docs
 
 markdown_extensions:
