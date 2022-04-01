@@ -1,6 +1,32 @@
 # Übersicht
 
-Sehen Sie sich unsere kurzen Videos zur Einführung an.
+Sehen Sie sich unsere kurzen Videos zur Einführung an.ts.<span style="height: 25px;width: 25px;background-color: magenta;border-radius: 50%;display: inline-block;"></span>Test
+
+<style>
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: blue;
+  border-radius: 50%;
+  display: inline-block;
+}
+</style>
+</head>
+<body>
+
+	
+
+<div style="text-align:center">
+  <h1>Round Dots / Circles</h1>
+  <span style="height: 25px;
+  width: 25px;
+  background-color: magenta;
+  border-radius: 50%;
+  display: inline-block;"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
 
 ## Admonitions 
 
