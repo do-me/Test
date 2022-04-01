@@ -1,32 +1,17 @@
 # Übersicht
 
 Sehen Sie sich unsere kurzen Videos zur Einführung an.ts.<span style="height: 25px;width: 25px;background-color: magenta;border-radius: 50%;display: inline-block;"></span>Test
+Sehen Sie sich unsere kurzen Videos zur Einführung an.ts.<span style="height: 16px;width: 16px;background-color: magenta;border-radius: 50%;display: inline-block;"></span>Test
+Sehen Sie sich unsere kurzen Videos zur Einführung an.ts.<span style="background-color: magenta;border-radius: 50%;display: inline-block;"></span>Test
 
-<style>
-.dot {
-  height: 25px;
-  width: 25px;
-  background-color: blue;
-  border-radius: 50%;
-  display: inline-block;
-}
-</style>
-</head>
-<body>
+Sehen Sie sich unsere kurzen Videos zur Einführung an.ts.<span style="height: 25px;width: 25px;background-color: magenta;border-radius: 50%;display: inline-block;"></span>Test
+Sehen Sie sich unsere kurzen Videos zur Einführung an.ts.<span style="height: 25px;width: 25px;background-color: magenta;border-radius: 50%;display: inline-block;"></span>Test
+Sehen Sie sich unsere kurzen Videos zur Einführung an.ts.<span style="height: 25px;width: 25px;background-color: magenta;border-radius: 50%;display: inline-block;"></span>Test
+Sehen Sie sich unsere kurzen Videos zur Einführung an.ts.<span style="height: 25px;width: 25px;background-color: magenta;border-radius: 50%;display: inline-block;"></span>Test
 
-	
+<span style="color:blue">some *blue* text</span>
 
-<div style="text-align:center">
-  <h1>Round Dots / Circles</h1>
-  <span style="height: 25px;
-  width: 25px;
-  background-color: magenta;
-  border-radius: 50%;
-  display: inline-block;"></span>
-  <span class="dot"></span>
-  <span class="dot"></span>
-  <span class="dot"></span>
-</div>
+<span style="color: magenta;">&#x1f534;&#xfe0e;</span>
 
 ## Admonitions 
 
