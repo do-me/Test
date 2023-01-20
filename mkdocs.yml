@@ -1,36 +1,3 @@
-site_name: MultiRoute Tour!
-
-nav:
-    - Home: index.md
-    - Handbuch:
-      - Übersicht: uebersicht.md
-      - Einführung: einfuehrung.md
-      - 1. Upload: upload.md
-      - 2. Planung: planung.md
-      - 3. Flotten: flotten.md
-      - 4. Touren: tour.md
-      - Tipps & Tricks: tipps.md
-      - Changelog: changelog.md
-    - Use Cases:
-      - Spediteur: spediteur.md
-      - Außendienst: aussendienst.md
-      - Schneeräumung: schneeraeumung.md
-      - Essen auf Rädern: essen_auf_raedern.md
-      - Getränkelieferungen: getraenkelieferung.md
-      - Lieferkisten: lieferkiste.md
-      - Gebäudereinigung: gebaeudereinigung.md
-    - API:
-      - MRT! API: api-intro.md
-      - Einführung: ablauf.md
-      - Routen & Endpunkte: routen.md
-      - Beispiele:
-        - Python: mrt-api-python.md
-        - PHP: mrt-api-php.md
-#    - Referenzen: 14.md
-    - Preise: preise.md
-    - Impressum: impressum.md
-    - Datenschutz: datenschutz.md
-
 theme:
   name: material
   custom_dir: docs/theme_override_home/
@@ -58,13 +25,14 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.indexes
+    - content.action.edit
+    - content.code.copy
     
-  font:
-    text: Roboto
-    code: Roboto Mono
+  font: false
   icon:  # from .icons path. Add to theme override for custom logo.
     logo: truck  # top left header logo
     repo: fontawesome/brands/git-alt
+    edit: material/file-edit-outline
   favicon: assets/favicon.ico #browser tab logo
 
 extra_javascript:
@@ -73,8 +41,8 @@ extra_css:
         - stylesheets/extra.css
         - stylesheets/font-awesome-4.7.0/css/font-awesome.min.css
 
-repo_url: https://github.com/do-me/Test
-repo_name: do-me/Test
+repo_url: https://github.com/gbconsite/MultiRoute-Tour
+repo_name: gbconsite/MultiRoute-Tour
 edit_uri: ./edit/main/docs
 
 markdown_extensions:
@@ -89,7 +57,11 @@ markdown_extensions:
       permalink: true
   - toc:
       title: Inhalt
-      
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+
 plugins:
   - minify:
       minify_html: true
@@ -97,6 +69,8 @@ plugins:
       minify_css: true
       htmlmin_opts:
           remove_comments: true
+  - search:
+      lang: de
 
 #extra:
 #  alternate:
