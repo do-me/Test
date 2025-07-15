@@ -1,5 +1,5 @@
-const sigmaGraphData = {
-  nodes: [
+{
+  "nodes": [
   {
     "id": "geolocating",
     "label": "Geolocating",
@@ -1333,31 +1333,5 @@ const sigmaGraphData = {
     "link_path": "business_continuity"
   }
 ],
-  edges: []
+"edges": []
 };
-
-// 2. The helper function to load the data
-function loadSigmaGraph(graphInstance) {
-  if (!graphInstance) {
-    console.error('Graphology instance not provided to loadSigmaGraph.');
-    return;
-  }
-  
-  sigmaGraphData.nodes.forEach(nodeData => {
-    if (!graphInstance.hasNode(nodeData.id)) {
-      graphInstance.addNode(nodeData.id, { ...nodeData });
-    }
-  });
-
-  sigmaGraphData.edges.forEach(edgeData => {
-    // Use a unique key for each edge to prevent duplicates
-    const edgeKey = `${edgeData.source}->${edgeData.target}`;
-    if (!graphInstance.hasEdge(edgeKey)) {
-      try { 
-        graphInstance.addEdgeWithKey(edgeKey, edgeData.source, edgeData.target, { ...edgeData }); 
-      } catch (e) { 
-        /* Handle potential errors if nodes don't exist, etc. */ 
-      }
-    }
-  });
-}
